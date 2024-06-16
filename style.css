@@ -80,7 +80,48 @@ header span {
   color: #51b6a1;
   margin-top: 10px;
 }
-
+.icon{
+  color:#f9f9f9;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  }
+.icon::before ,
+.icon::after
+{
+  content: "";
+  position: absolute;
+  width: 63px;
+  height: 63px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  opacity: .5;
+}
+.icon::before {
+  outline: 3px solid #51b6a1;
+}
+.icon::after {
+  border-color: transparent transparent #51b6a1  transparent;
+  border-width: 7px;
+  border-style: solid;
+}
+.icon i {
+  width: 60px;
+  height: 60px;
+  background-color: #51b6a1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border-right: 1px solid black;
+  outline: 3px solid #3b8272;
+  border: none;
+}
 /* end header style */
 
 .landing-page {
@@ -174,36 +215,6 @@ header span {
   top: -10px;
   right: 0px;
 }
-.play {
-  margin-top: 40px;
-  display: flex;
-  align-items: center;
-}
-.play img {
-  cursor: pointer;
-  position: relative;
-  border-radius: 50%;
-  
-}
-
-.play img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    position: relative;
-}
-.play img::after{
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  top: 10px;
-  left: 20px;
-  z-index: 1;
-}
-
-
 .play h2 {
   font-size: 1.4rem;
   color: #f9f9f9;
@@ -2064,7 +2075,7 @@ cursor: pointer;
   width: 100%;
   padding: 20px;
   flex-direction: column;
-  min-height: 130vh;
+  min-height: 190vh;
 }
 .text-side {
 width: 100%;
@@ -4402,15 +4413,13 @@ width: 100%;
   .play {
     display:block;
   }
-  
+  .nav-links a{
+  font-size: 1.4rem;
+  }
 .play {
   margin-top: 40px;
   display: flex;
   align-items: center;
-}
-.play img {
-  cursor: pointer;
-  border-radius: 50%;
 }
   
 .services {
@@ -4755,9 +4764,6 @@ width: 100%;
   .rev-img{
     border: 2px solid white;
   }
-  
-  
-  
   
   .blog {
     background-color: #000000;
